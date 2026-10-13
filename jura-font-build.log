@@ -1,0 +1,37 @@
+Unity Editor version:    6000.0.75f1 (26349cd2a5c8)
+Branch:                  6000.0/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.4 (Build 25E246)
+Darwin version:          25.4.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-adoralin" at "2026-08-04T04:15:04.181796Z"
+Launching external process: /Applications/Unity/Hub/Editor/6000.0.75f1/Unity.app/Contents/Resources/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.0.75f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-nographics
+-quit
+-projectPath
+/Users/adoralin/Downloads/UPose (1)
+-executeMethod
+JuraFontAssetBuilder.BuildFromBatch
+-logFile
+/Users/adoralin/Downloads/UPose (1)/jura-font-build.log
+Successfully changed project path to: /Users/adoralin/Downloads/UPose (1)
+/Users/adoralin/Downloads/UPose (1)
+It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: /Users/adoralin/Downloads/UPose (1)
+Fatal Error! It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: /Users/adoralin/Downloads/UPose (1)
+[Package Manager] Server process was shutdown
