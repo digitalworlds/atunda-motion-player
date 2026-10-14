@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atunda Dance Project</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <p class="brand">Atunda Dance Project</p>
+      </header>
+
+      <main class="stage">
+        <div id="unity-container" class="unity-desktop">
+          <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+          <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+              <div id="unity-progress-bar-full"></div>
+            </div>
+          </div>
+          <div id="unity-warning"></div>
+          <button type="button" id="btn-exit-fullscreen" class="exit-fullscreen-btn" hidden>
+            Exit fullscreen
+          </button>
+        </div>
+      </main>
+
+      <aside class="controls" aria-label="Game controls">
+        <div class="button-row">
+          <button type="button" id="btn-prev-move" class="btn" disabled>
+            Previous dance move
+          </button>
+          <button type="button" id="btn-next-move" class="btn" disabled>
+            Next dance move
+          </button>
+          <button type="button" id="btn-random-mode" class="btn btn-accent btn-random" disabled>
+            Random
+          </button>
+          <button type="button" id="btn-prev-character" class="btn btn-secondary" disabled>
+            Previous character
+          </button>
+          <button type="button" id="btn-next-character" class="btn btn-secondary" disabled>
+            Next character
+          </button>
+          <button type="button" id="btn-fullscreen" class="btn btn-ghost" disabled>
+            Fullscreen
+          </button>
+          <button type="button" id="btn-toggle-dance-list" class="btn btn-ghost" disabled>
+            Hide dance list
+          </button>
+        </div>
+        <form class="url-load" id="form-load-dance">
+          <p class="url-load-title">Load, rename, or remove dance</p>
+          <div class="url-load-fields">
+            <label class="url-load-field">
+              Dance name
+              <input
+                type="text"
+                id="dance-name"
+                name="dance-name"
+                placeholder="New dance"
+                autocomplete="off"
+              />
+            </label>
+            <label class="url-load-field url-load-field-wide">
+              JSON URL
+              <input
+                type="text"
+                id="dance-url"
+                name="dance-url"
+                inputmode="url"
+                placeholder="https://example.com/dance.json"
+                autocomplete="off"
+              />
+            </label>
+            <div class="url-load-actions">
+              <button type="submit" id="btn-load-dance" class="btn" disabled>
+                Load dance
+              </button>
+              <button type="button" id="btn-rename-dance" class="btn btn-secondary" disabled>
+                Rename dance
+              </button>
+              <button type="button" id="btn-remove-dance" class="btn btn-secondary" disabled>
+                Remove dance
+              </button>
+            </div>
+          </div>
+          <label class="url-load-field url-load-file">
+            Or choose a .json file
+            <input type="file" id="dance-file" name="dance-file" accept=".json,application/json" />
+          </label>
+          <p class="hint" id="load-dance-status">
+            Type a dance name if you want, then choose a .json dance file. It loads when you click Load dance. If that file is already loaded, changing the name and clicking Load dance only renames it. Remove dance drops the selected dance from the list until you refresh.
+          </p>
+        </form>
+        <form class="url-load" id="form-load-avatar">
+          <p class="url-load-title">Load, rename, or remove character</p>
+          <div class="url-load-fields">
+            <label class="url-load-field">
+              Character name
+              <input
+                type="text"
+                id="avatar-name"
+                name="avatar-name"
+                placeholder="New character"
+                autocomplete="off"
+              />
+            </label>
+            <label class="url-load-field url-load-field-wide">
+              GLB URL
+              <input
+                type="text"
+                id="avatar-url"
+                name="avatar-url"
+                inputmode="url"
+                placeholder="https://example.com/avatar.glb"
+                autocomplete="off"
+              />
+            </label>
+            <div class="url-load-actions">
+              <button type="submit" id="btn-load-avatar" class="btn" disabled>
+                Load avatar
+              </button>
+              <button type="button" id="btn-rename-avatar" class="btn btn-secondary" disabled>
+                Rename character
+              </button>
+              <button type="button" id="btn-remove-avatar" class="btn btn-secondary" disabled>
+                Remove character
+              </button>
+            </div>
+          </div>
+          <label class="url-load-field url-load-file">
+            Or choose a .glb file
+            <input type="file" id="avatar-file" name="avatar-file" accept=".glb,model/gltf-binary" />
+          </label>
+          <p class="hint" id="load-avatar-status">
+            Type a character name if you want, then choose a .glb file. It loads when you click Load avatar.
+          </p>
+        </form>
+      </aside>
+    </div>
+
+    <script src="game.js?v=wasm-reload-9"></script>
+  </body>
+</html>
