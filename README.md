@@ -2,6 +2,8 @@
 
 Use this WebGL build as a 3D dance viewer on any website. The page talks to Unity through one object, `WebBridge`. Your HTML buttons call the same actions as the in-game overlay (left/right, random, pause/play, dance list, and more).
 
+Live demo: https://digitalworlds.github.io/atunda-motion-player/
+
 ## How the bridge works
 
 Unity WebGL exposes `unityInstance.SendMessage(gameObjectName, methodName, optionalString)`.
